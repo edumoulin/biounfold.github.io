@@ -133,6 +133,12 @@ body {
   line-height: 1.6;
 }
 
-.page-heading {
-  display: none;
+/* Hide the auto H1 on the home layout (wins on specificity) */
+h1.page-heading { 
+  display: none !important; 
+}
+
+/* (Optional) extra safety if Minima changes markup */
+.home .page-heading { 
+  display: none !important; 
 }
