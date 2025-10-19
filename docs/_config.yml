@@ -1,0 +1,15 @@
+title: BioUnfold
+description: "Reveal Possibilities — Exploring how AI can meaningfully advance biology and drug discovery."
+bio_name: "<strong class='bio'>Bio</strong><em class='unfold'>Unfold</em>"
+tagline: "Reveal Possibilities"
+description: Practical insights where AI, biology, and chemistry meet.
+theme: minima
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+minima:
+  skin: auto
+author: Etienne Dumoulin
+github_url: https://github.com/edumoulin/biounfold.github.io/
+linkedin_url: https://www.linkedin.com/in/%C3%A9tienne-dumoulin-624a9624/

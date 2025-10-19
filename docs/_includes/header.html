@@ -1,0 +1,33 @@
+<header class="site-header" role="banner">
+  <div class="wrapper nav-bar">
+    <!-- Left: Brand -->
+    <a class="site-title brand" rel="author" href="{{ '/' | relative_url }}">
+      {%- if site.bio_name -%}
+        {{ site.bio_name | markdownify | replace: '<p>','' | replace: '</p>','' }}
+      {%- else -%}
+        {{ site.title | escape }}
+      {%- endif -%}
+    </a>
+
+    <!-- Center: Tagline -->
+    <div class="site-tagline">
+      {%- if site.tagline -%}
+        <em>{{ site.tagline }}</em>
+      {%- endif -%}
+    </div>
+
+    <!-- Right: External links -->
+    <nav class="site-nav external">
+      <span class="ext-links">
+        {%- if site.github_url -%}
+          <a href="{{ site.github_url }}" target="_blank" rel="noopener">GitHub</a>
+        {%- endif -%}
+        <span class="sep">*</span>
+        {%- if site.linkedin_url -%}
+          <a href="{{ site.linkedin_url }}" target="_blank" rel="noopener">LinkedIn</a>
+        {%- endif -%}
+      </span>
+    </nav>
+  </div>
+</header>
+

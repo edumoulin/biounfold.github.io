@@ -1,0 +1,8 @@
+source "https://rubygems.org"
+
+# This pins Jekyll and plugins to exactly what GitHub Pages uses
+gem "github-pages", group: :jekyll_plugins
+
+# Needed when running on Ruby ≥ 3
+gem "webrick"
+

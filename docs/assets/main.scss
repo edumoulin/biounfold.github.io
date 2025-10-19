@@ -1,0 +1,135 @@
+---
+# this front matter makes Jekyll process the file
+---
+
+@import "minima";
+
+.site-title { letter-spacing: 0; word-spacing: 0;}
+
+/* Treat the whole wordmark as one typographic unit */
+.brand-wordmark {
+  white-space: nowrap;
+  text-rendering: optimizeLegibility; /* better kerning/ligatures */
+  font-kerning: normal;
+  font-synthesis: none;               /* avoid fake bold/italic */
+}
+
+strong.bio,
+em.unfold {
+  display: inline;
+  white-space: nowrap;
+}
+
+strong.bio {
+  
+  display: contents;
+  font-weight: 700; 
+  color: #222222; 
+  margin-right: 0;
+  padding-right: 0;
+}
+em.unfold {
+  display: contents;
+  font-style: italic; 
+  color: #444444;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* Header layout */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+/* Left: brand */
+.nav-bar .brand {
+  display: inline-flex;
+  align-items: baseline;
+  gap: .25rem;
+  text-decoration: none;
+}
+
+/* Center: tagline */
+.site-tagline {
+  flex: 1 1 auto;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.site-tagline em {
+  font-style: italic;
+  opacity: .9;
+}
+
+/* Right: external links */
+.site-nav.external .ext-links {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-weight: 500;
+}
+.site-nav.external a {
+  text-decoration: none;
+}
+.site-nav.external .sep {
+  opacity: .5;
+  padding: 0 .25rem;
+}
+
+/* Keep burger section visually separate on small screens */
+.nav-burger {
+  margin-top: .25rem;
+}
+
+/* Responsive: on very small screens stack brand/top bar neatly */
+@media (max-width: 640px) {
+  .nav-bar {
+    flex-wrap: wrap;
+  }
+  .site-tagline {
+    order: 3;
+    width: 100%;
+    margin-top: .25rem;
+  }
+}
+
+.intro-text {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  max-width: 640px;
+  margin-bottom: 1.5rem;
+}
+.posts-title {
+  margin-top: 2rem;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+
+.rss-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: inherit;
+  text-decoration: none;
+}
+.rss-link svg {
+  flex-shrink: 0;
+}
+.rss-link a:hover {
+  color: #f26522; /* classic RSS orange */
+}
+
+/* Base text: professional, modern, legible */
+body {
+  font-family: 'Source Sans 3', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
