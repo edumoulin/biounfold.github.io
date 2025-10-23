@@ -142,3 +142,46 @@ h1.page-heading {
 .home .page-heading { 
   display: none !important; 
 }
+
+
+.page-content h3 {
+  font-weight: 600;       /* slightly stronger but not full bold */
+  color: #111;            /* deeper tone */
+  margin-top: 2.5rem;     /* more breathing room above */
+  margin-bottom: 1rem;
+  letter-spacing: 0.2px;  /* tiny tracking for elegance */
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 0.4rem;
+}
+
+/* Tighter rhythm for essay-style posts */
+.post-content h4,
+h4.post-title,
+.entry-content h4,
+.page-content h4 {
+  font-weight: 500;
+  margin-top: 2rem;
+  font-size: 1.05rem;
+  color: #222;
+  border-left: 3px solid #ccc;
+  padding-left: 0.6rem;
+}
+
+/* Subtle separation for long essays */
+.post-content hr {
+  margin: 2.5rem 0;
+  border: none;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Improve paragraph flow */
+.post-content p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.page-content hr {
+  border: none;                  /* remove default styles */
+  border-top: 1px solid #cccccc; /* same soft grey as the h4 bar */
+  margin: 2rem 0;                /* balanced spacing above and below */
+}

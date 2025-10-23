@@ -1,3 +1,7 @@
 .DS_Store
+# Jekyll output
 docs/_site/
-
+.jekyll-cache/
+.sass-cache/
+# Local junk
+**/.ipynb_checkpoints/

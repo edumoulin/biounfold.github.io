@@ -1,5 +1,5 @@
 serve:
-	bundle exec jekyll serve --source docs --livereload
+	cd docs && bundle exec jekyll serve --drafts --future --livereload
 
 publish: publish_posts export_nbs
 
