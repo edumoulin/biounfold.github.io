@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Drug discovery is complex"
+title: "Where Biology and AI Unfold"
 date: 2025-10-23
 tags: [AI / Computation, Biology / Experimentation]
 ---
