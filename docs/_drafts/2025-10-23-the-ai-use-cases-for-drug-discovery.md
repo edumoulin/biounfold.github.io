@@ -3,9 +3,12 @@ layout: post
 title: "The AI Use Cases for Drug Discovery"
 date: 2025-10-23
 tags: [AI / Computation]
+image: /assets/images/biounfold-003-where-ai-matters-most.png
 ---
 
 ### BioUnfold #3 — The AI Use Cases for Drug Discovery
+
+![Where AI matters most](/assets/images/biounfold-003-where-ai-matters-most.png){: width="90%"}
 
 Making a difference with AI in drug discovery is not about finding more places to apply it — but about choosing deliberately where it adds real value.
 

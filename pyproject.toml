@@ -1,0 +1,18 @@
+[project]
+name = "biounfold"
+version = "0.1.0"
+requires-python = ">=3.10"
+
+dependencies = [
+  "matplotlib",
+  "networkx",
+  "ipykernel",
+  "jupytext",
+  "jupyterlab",
+]
+
+[tool.jupytext]
+formats = "ipynb,py:percent"
+notebook_metadata_filter = "all"
+cell_metadata_filter = "-all"
+

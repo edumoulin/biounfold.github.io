@@ -1,0 +1,36 @@
+services:
+  lab:
+    build:
+      context: .
+      args:
+        UID: "${UID:-1000}"   # still exported by Makefile, used only by 'user:' below
+        GID: "${GID:-1000}"
+    ports:
+      - "127.0.0.1:8888:8888"
+    volumes:
+      - ./:/work
+      # Optional: if you want git author info inside container,
+      # uncomment the next line to map your global config into /work/.gitconfig (HOME)
+      # - ${HOME}/.gitconfig:/work/.gitconfig:ro
+    user: "${UID:-1000}:${GID:-1000}"
+    environment:
+      - JUPYTER_CONFIG_DIR=/work/.jupyter
+    profiles: ["cpu"]
+
+  lab-gpu:
+    build:
+      context: .
+      args:
+        UID: "${UID:-1000}"
+        GID: "${GID:-1000}"
+    ports:
+      - "127.0.0.1:8888:8888"
+    volumes:
+      - ./:/work
+      # - ${HOME}/.gitconfig:/work/.gitconfig:ro
+    user: "${UID:-1000}:${GID:-1000}"
+    # Requires NVIDIA Container Toolkit on the GPU server
+    gpus: all
+    environment:
+      - JUPYTER_CONFIG_DIR=/work/.jupyter
+    profiles: ["gpu"]

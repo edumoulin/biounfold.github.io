@@ -3,16 +3,19 @@ layout: post
 title: "Where Biology and AI Unfold"
 date: 2025-10-23
 tags: [AI / Computation, Biology / Experimentation]
+image: /assets/images/biounfold-001-venn-li.png
 ---
 
 ### BioUnfold #1 — Where Biology and AI Unfold
+
+![Biology ∩ AI = Drug Discovery](/assets/images/biounfold-001-venn-li.png){: width="90%"}
 
 **Drug discovery is complex — and complexity distorts meaning.**
 
 Every layer of specialization adds another step of translation.  
 Like a long game of telephone, the original signal can fade.
 
-**BioUnfold** is my way to explore the tension between biology, AI, and drug development —  
+**BioUnfold** is my way to explore the tension between biology, AI, and drug discovery —  
 and to uncover where these worlds can truly meet.
 
 The goal is simple: **reveal possibilities hidden in the noise of complexity.**
