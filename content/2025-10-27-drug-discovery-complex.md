@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Where Biology and AI Unfold"
-date: 2025-10-23
+date: 2025-10-27
 tags: [AI / Computation, Biology / Experimentation]
 image: /assets/images/biounfold-001-venn-li.png
 ---
