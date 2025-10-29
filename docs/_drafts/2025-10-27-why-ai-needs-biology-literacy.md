@@ -8,6 +8,8 @@ image: /assets/images/biounfold-004-why-ai-needs-biology-literacy.png
 
 ### BioUnfold #4 — Why AI Needs Biology Literacy
 
+![Biology-aware AI](/assets/images/biounfold-004-why-ai-needs-biology-literacy.png){: width="90%"}
+
 You should find the right problem — not just the right solution.
 
 AI has transformed many industries, but its applications remain context-specific. In drug discovery, it does not solve a math problem in isolation — it intervenes in a biological system.
