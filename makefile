@@ -32,13 +32,18 @@ export_nbs:
 # -------------------------
 # Environment / Dependencies
 # -------------------------
-## Resolve and lock exact Python deps to uv.lock.
+# Resolve and lock exact Python deps to uv.lock (from pyproject.toml).
 lock:
 	uv lock --python 3.11
-	uv export --format requirements-txt --python 3.11 --output-file requirements.lock.txt
-	@echo "[lock311] Updated uv.lock and requirements.lock.txt for Python 3.11"
+	@echo "[lock311] Updated uv.lock for Python 3.11"
 
-deps: lock
+## Create/refresh local virtualenv from uv.lock (installs deps).
+sync: lock
+	uv sync --python 3.11
+	@echo "[sync311] Installed dependencies into .venv using uv.lock"
+
+## Convenience: default deps target does a full sync.
+deps: sync
 
 # -------------------------
 # Docker lifecycle

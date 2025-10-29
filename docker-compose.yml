@@ -8,13 +8,13 @@ services:
     ports:
       - "127.0.0.1:8888:8888"
     volumes:
-      - ./:/work
+      - ./:/app/work
       # Optional: if you want git author info inside container,
       # uncomment the next line to map your global config into /work/.gitconfig (HOME)
       # - ${HOME}/.gitconfig:/work/.gitconfig:ro
     user: "${UID:-1000}:${GID:-1000}"
     environment:
-      - JUPYTER_CONFIG_DIR=/work/.jupyter
+      - JUPYTER_CONFIG_DIR=/app/.jupyter
     profiles: ["cpu"]
 
   lab-gpu:
@@ -26,11 +26,11 @@ services:
     ports:
       - "127.0.0.1:8888:8888"
     volumes:
-      - ./:/work
+      - ./:/app/work
       # - ${HOME}/.gitconfig:/work/.gitconfig:ro
     user: "${UID:-1000}:${GID:-1000}"
     # Requires NVIDIA Container Toolkit on the GPU server
     gpus: all
     environment:
-      - JUPYTER_CONFIG_DIR=/work/.jupyter
+      - JUPYTER_CONFIG_DIR=/app/.jupyter
     profiles: ["gpu"]

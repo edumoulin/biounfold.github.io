@@ -9,6 +9,8 @@ dependencies = [
   "ipykernel",
   "jupytext",
   "jupyterlab",
+  "pandas",
+  "seaborn",
 ]
 
 [tool.jupytext]
