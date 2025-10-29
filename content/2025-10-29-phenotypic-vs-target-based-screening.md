@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Phenotypic vs Target-Based Screening"
-date: 2025-10-23
+date: 2025-10-29
 tags: [Biology / Experimentation, Chemistry / Design]
 image: /assets/images/biounfold-002-discovery-clarity.png
 ---
