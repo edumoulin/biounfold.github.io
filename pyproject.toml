@@ -11,6 +11,7 @@ dependencies = [
   "jupyterlab",
   "pandas",
   "seaborn",
+  "scikit-learn",
 ]
 
 [tool.jupytext]

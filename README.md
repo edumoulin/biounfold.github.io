@@ -113,7 +113,6 @@ If you prefer the Colab interface:
 make lock         # lock deps (uv) and export pip requirements
 make build        # build Docker image (CPU by default)
 make up           # run JupyterLab (CPU)
-make up PROFILE=gpu  # run with GPU on supported hosts
 make down         # stop Docker containers
 make clean        # stop + remove volumes
 make nuke         # prune dangling images
