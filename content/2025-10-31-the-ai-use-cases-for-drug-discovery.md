@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The AI Use Cases for Drug Discovery"
-date: 2025-10-23
+date: 2025-10-31
 tags: [AI / Computation]
 image: /assets/images/biounfold-003-where-ai-matters-most.png
 ---
