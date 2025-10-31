@@ -35,7 +35,10 @@ Building effective systems costs time — collecting the right data, shaping the
 Real leverage does not come from applying AI everywhere. 
 It comes from choosing one place where it matters most. 
 
-Every pipeline is different, but for an algorithm to make a difference, it has to be applied early enough and be fed with contextual, relevant data.
+Most experiments need analysis, but few deserve full automation. A team may run
+many analyses, yet build only one or two true AI platforms — the systems that
+learn across projects.
+
 
 #### Target-based vs phenotypic platforms
 
