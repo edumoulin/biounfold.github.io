@@ -44,3 +44,15 @@ Relying only on targets makes you efficient but narrow.
 Relying only on phenotypes makes you curious but slow.  
 Balancing both makes discovery powerful.
 
+---
+
+#### Additional reading
+
+- **"Phenotypic Screening in the Era of Mechanism-Based Drug Discovery"** — *Nature Reviews Drug Discovery* (2022).  
+  [Read on PubMed Central](https://pmc.ncbi.nlm.nih.gov/articles/PMC9708951/)  
+  A concise overview of how modern phenotypic and target-based paradigms can converge, with examples across therapeutic areas.  
+  *h/t Ronen Schuster*
+
+---
+
+*Edited on 31 Oct 2025 — added Additional Reading section with reference and credit.*
