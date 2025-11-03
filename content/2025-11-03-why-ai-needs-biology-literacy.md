@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why AI Needs Biology Literacy"
-date: 2025-10-27
+date: 2025-11-03
 tags: [AI / Computation, Biology / Experimentation]
 image: /assets/images/biounfold-004-why-ai-needs-biology-literacy.png
 ---
