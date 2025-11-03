@@ -131,7 +131,29 @@ fig = plot_ai_vs_bio_contrast(dpi=dpi)
 plt.show()
 
 # %%
-fig.savefig("../docs/assets/images/biounfold-004-why-ai-needs-biology-literacy.png", dpi=dpi)
-plt.close(fig)
+dpi = 100
+width_px = 1200
+height_px = 639
+
+fig = plot_ai_vs_bio_contrast(width_px=width_px, height_px=height_px, dpi=dpi)
+
+# 1) Ensure legends are included in layout
+for ax in fig.axes:
+    leg = ax.get_legend()
+    if leg is not None:
+        leg.set_in_layout(True)
+
+# 2) Compute proportional padding (e.g. 2% of figure size)
+#    pad_inches is in *inches*, so convert from pixels.
+pad_fraction = 0.02  # adjust this to taste (1–3% usually enough)
+pad_inches = (height_px / dpi) * pad_fraction
+
+# 3) Save without transforming the plot
+fig.savefig(
+    "../docs/assets/images/biounfold-004-why-ai-needs-biology-literacy.png",
+    dpi=dpi,
+    bbox_inches="tight",   # include legends & titles
+    pad_inches=pad_inches, # proportional white space
+)
 
 # %%
