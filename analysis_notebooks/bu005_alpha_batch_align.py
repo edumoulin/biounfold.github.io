@@ -171,7 +171,6 @@
 #
 
 # %%
-# Cell 0 — Imports & global setup (run once)
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -180,7 +179,6 @@ from sklearn.decomposition import PCA
 from sklearn.metrics import pairwise_distances
 from sklearn.preprocessing import StandardScaler
 
-# Matplotlib defaults (neutral; no specific colors forced)
 plt.rcParams["figure.figsize"] = (10, 4)
 plt.rcParams["axes.grid"] = True
 plt.rcParams["figure.dpi"] = 120
@@ -217,7 +215,7 @@ plt.rcParams["figure.dpi"] = 120
 # We will simulate:
 # - Two batches with different means and variances  
 # - A binary biological label (e.g., treatment vs. control)  
-# - Slight imbalance of labels across batches
+# - Imbalance of labels across batches
 #
 # This imbalance ensures that batch effects and biology overlap,
 # so we can observe what happens when correction is applied
@@ -426,13 +424,15 @@ def _fit_design(Z: pd.DataFrame, design: pd.DataFrame | None):
         fitted = pd.DataFrame(0.0, index=Z.index, columns=Z.columns)
         return fitted, Z.copy()
 
-    # Align columns (samples) and use numpy arrays
-    Xmat = design.loc[Z.columns].values  # samples × p
-    # Precompute (X^T X)^+ X^T
-    XtX_inv_Xt = np.linalg.pinv(Xmat.T @ Xmat) @ Xmat.T    # p × samples
-    # Solve feature-wise in one go: Beta^T = (XtX)^+ X^T Z^T
-    Beta_T = XtX_inv_Xt @ Z.T.values                       # p × features
-    fitted = (Xmat @ Beta_T).T                             # features × samples
+    # OLS: solve Z ≈ X β by minimizing ||Z - Xβ||².
+    # Intercept captures baseline; Group coefficient captures group difference.
+    # This isolates biological signal so batch correction does not remove it.
+    # β = (XᵀX)⁺ Xᵀ Z is computed via pseudoinverse (SVD) for stability.
+    Xmat = design.loc[Z.columns].values
+    XtX_inv_Xt = np.linalg.pinv(Xmat.T @ Xmat) @ Xmat.T
+    # Solve feature-wise in one go: Beta^T = (XtX)^-1 X^T Z^T
+    Beta_T = XtX_inv_Xt @ Z.T.values
+    fitted = (Xmat @ Beta_T).T
 
     fitted_df = pd.DataFrame(fitted, index=Z.index, columns=Z.columns)
     R = Z - fitted_df
@@ -465,8 +465,8 @@ def batch_align_minimal(X: pd.DataFrame,
     for lev in levels:
         cols = R.columns[bcat == lev]
         Rij = R.loc[:, cols]
-        g = Rij.mean(axis=1).values                       # per-feature mean (residual)
-        v = Rij.var(axis=1, ddof=1).replace(0, np.nan).fillna(1.0)  # per-feature var
+        g = Rij.mean(axis=1).values
+        v = Rij.var(axis=1, ddof=1).replace(0, np.nan).fillna(1.0)
         # 4) Align this batch: remove mean, scale to unit variance
         R_adj.loc[:, cols] = (Rij.sub(g, axis=0)).div(np.sqrt(v), axis=0)
 

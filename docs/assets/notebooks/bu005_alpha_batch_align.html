@@ -7664,11 +7664,10 @@ robust handling of small batches, and tested defaults.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Cell 0 — Imports &amp; global setup (run once)</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
@@ -7676,7 +7675,6 @@ robust handling of small batches, and tested defaults.</p>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">pairwise_distances</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">StandardScaler</span>
 
-<span class="c1"># Matplotlib defaults (neutral; no specific colors forced)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">"figure.figsize"</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">"axes.grid"</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">"figure.dpi"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">120</span>
@@ -7723,7 +7721,7 @@ omics or imaging experiments.</p>
 <ul>
 <li>Two batches with different means and variances</li>
 <li>A binary biological label (e.g., treatment vs. control)</li>
-<li>Slight imbalance of labels across batches</li>
+<li>Imbalance of labels across batches</li>
 </ul>
 <p>This imbalance ensures that batch effects and biology overlap,
 so we can observe what happens when correction is applied
@@ -7739,7 +7737,7 @@ is visible in a PCA plot.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">simulate_batch_data</span><span class="p">(</span>
@@ -7814,7 +7812,7 @@ is visible in a PCA plot.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
@@ -7860,7 +7858,7 @@ algorithm preserves or removes.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">pca2d</span><span class="p">(</span><span class="n">X</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">n_components</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">42</span><span class="p">):</span>
@@ -7967,7 +7965,7 @@ It is intentionally simple so the geometry of the correction is easy to see.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -7994,13 +7992,15 @@ It is intentionally simple so the geometry of the correction is easy to see.</p>
         <span class="n">fitted</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Z</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">Z</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">fitted</span><span class="p">,</span> <span class="n">Z</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
-    <span class="c1"># Align columns (samples) and use numpy arrays</span>
-    <span class="n">Xmat</span> <span class="o">=</span> <span class="n">design</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">Z</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>  <span class="c1"># samples × p</span>
-    <span class="c1"># Precompute (X^T X)^+ X^T</span>
-    <span class="n">XtX_inv_Xt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">pinv</span><span class="p">(</span><span class="n">Xmat</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">Xmat</span><span class="p">)</span> <span class="o">@</span> <span class="n">Xmat</span><span class="o">.</span><span class="n">T</span>    <span class="c1"># p × samples</span>
-    <span class="c1"># Solve feature-wise in one go: Beta^T = (XtX)^+ X^T Z^T</span>
-    <span class="n">Beta_T</span> <span class="o">=</span> <span class="n">XtX_inv_Xt</span> <span class="o">@</span> <span class="n">Z</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">values</span>                       <span class="c1"># p × features</span>
-    <span class="n">fitted</span> <span class="o">=</span> <span class="p">(</span><span class="n">Xmat</span> <span class="o">@</span> <span class="n">Beta_T</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>                             <span class="c1"># features × samples</span>
+    <span class="c1"># OLS: solve Z ≈ X β by minimizing ||Z - Xβ||².</span>
+    <span class="c1"># Intercept captures baseline; Group coefficient captures group difference.</span>
+    <span class="c1"># This isolates biological signal so batch correction does not remove it.</span>
+    <span class="c1"># β = (XᵀX)⁺ Xᵀ Z is computed via pseudoinverse (SVD) for stability.</span>
+    <span class="n">Xmat</span> <span class="o">=</span> <span class="n">design</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">Z</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">XtX_inv_Xt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">pinv</span><span class="p">(</span><span class="n">Xmat</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">Xmat</span><span class="p">)</span> <span class="o">@</span> <span class="n">Xmat</span><span class="o">.</span><span class="n">T</span>
+    <span class="c1"># Solve feature-wise in one go: Beta^T = (XtX)^-1 X^T Z^T</span>
+    <span class="n">Beta_T</span> <span class="o">=</span> <span class="n">XtX_inv_Xt</span> <span class="o">@</span> <span class="n">Z</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">fitted</span> <span class="o">=</span> <span class="p">(</span><span class="n">Xmat</span> <span class="o">@</span> <span class="n">Beta_T</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
 
     <span class="n">fitted_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">fitted</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Z</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">Z</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
     <span class="n">R</span> <span class="o">=</span> <span class="n">Z</span> <span class="o">-</span> <span class="n">fitted_df</span>
@@ -8033,8 +8033,8 @@ It is intentionally simple so the geometry of the correction is easy to see.</p>
     <span class="k">for</span> <span class="n">lev</span> <span class="ow">in</span> <span class="n">levels</span><span class="p">:</span>
         <span class="n">cols</span> <span class="o">=</span> <span class="n">R</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="n">bcat</span> <span class="o">==</span> <span class="n">lev</span><span class="p">]</span>
         <span class="n">Rij</span> <span class="o">=</span> <span class="n">R</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="n">cols</span><span class="p">]</span>
-        <span class="n">g</span> <span class="o">=</span> <span class="n">Rij</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>                       <span class="c1"># per-feature mean (residual)</span>
-        <span class="n">v</span> <span class="o">=</span> <span class="n">Rij</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>  <span class="c1"># per-feature var</span>
+        <span class="n">g</span> <span class="o">=</span> <span class="n">Rij</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">v</span> <span class="o">=</span> <span class="n">Rij</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
         <span class="c1"># 4) Align this batch: remove mean, scale to unit variance</span>
         <span class="n">R_adj</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="n">cols</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">Rij</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">v</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
@@ -8052,7 +8052,7 @@ It is intentionally simple so the geometry of the correction is easy to see.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Without design (will partially erase biology)</span>
@@ -8089,7 +8089,7 @@ and then <strong>with</strong> one.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 3×2 PCA grid:</span>
@@ -8175,7 +8175,7 @@ well the correction aligns data across batches while keeping biology intact.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">pairwise_distances</span>
@@ -8234,7 +8234,7 @@ well the correction aligns data across batches while keeping biology intact.</p>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
