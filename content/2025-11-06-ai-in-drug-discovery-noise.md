@@ -6,7 +6,7 @@ tags: [AI / Computation]
 image: /assets/images/biounfold-005-ai-in-drug-discovery-noise.png
 ---
 
-### BioUnfold #&#8203;5a — AI in Drug Discovery, or the Art of Dealing with Noise
+### BioUnfold #&#8203;5 — AI in Drug Discovery, or the Art of Dealing with Noise
 
 ![Dealing with noise in drug discovery](/assets/images/biounfold-005-figure-batch-align-grid-linkedin.png){: width="90%"}
 
@@ -76,9 +76,6 @@ In the companion notebook, we explore a simple but powerful approach to batch co
 It is a last-step correction, not a substitute for good experimental design —
 but it shows how statistical reasoning and biological context work together.
 
-You do not need large datasets to follow along; the goal is to see how
-biological intuition shapes even the simplest normalization steps.
-
 You do not need large datasets to follow along; the goal is to see how biological intuition shapes technical choices.  
 [→ Companion notebook](/assets/notebooks/bu005_alpha_batch_align.html)
 
@@ -86,6 +83,7 @@ You do not need large datasets to follow along; the goal is to see how biologica
 ### Closing thought
 
 Dealing with noise is not a side quest in AI-driven discovery — it *is* the quest.  
+
 Noise tells us what we do not yet understand about the system.  
 Managing it is where modeling meets measurement — and where progress depends on curiosity shared between biologists and AI experts alike.
 
