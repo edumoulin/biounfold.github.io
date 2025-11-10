@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "When Innovation Is Out of Sync"
-date: 2025-11-04
-tags: [Strategy / Market, AI / Computation, Biology / Experimentation]
+date: 2025-11-10
+tags: [Strategy / Market, AI / Computation]
 image: /assets/images/biounfold-006-start-ai-early.png
 ---
 
@@ -22,11 +22,10 @@ the computational work is trying to understand how that signal behaves across
 conditions. Both are working toward the same objective — just from **different
 angles**.
 
+The solution is not more alignment meetings. It is accepting that bringing
+computation in early **costs time now**, but that is the time that **expands the
+biology** and lets the program **move faster later**.
 
-The solution is not more alignment meetings.  
-It is understanding **where the program is in its maturity**.
-
----
 
 ### Not a Pipeline — a Rhythm
 
@@ -51,7 +50,6 @@ discovery.**
 
 Most real programs use these modes in parallel rather than sequentially.
 
----
 
 ### Example: Immunofluorescent Screening
 
@@ -70,7 +68,6 @@ And once that pattern is shown to be stable, automation *is* useful — not beca
 Automation is not the goal.  
 **Automation is what you do once the thinking is done.**
 
----
 
 ### Where Teams Go Wrong
 
@@ -83,7 +80,6 @@ This slows learning and makes collaboration fragile.
 
 The art is in knowing when to shift the cadence.
 
----
 
 ### A Simple Way to Find the Right Tempo
 
