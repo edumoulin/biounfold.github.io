@@ -7,6 +7,8 @@ tags: [AI / Computation, Chemistry / Design]
 
 ### **BioUnfold #7 — AI in Chemistry: Beyond Binding**
 
+![Beyond Binding](/assets/images/biounfold-007-beyond-binding.png){: width="90%"}
+
 Recent advances in structure and docking models have meaningfully improved how we explore chemical space. AlphaFold and flexible docking models shorten early optimization cycles. They help teams generate and evaluate ideas faster.
 
 But they mostly solve **one part** of the problem: **binding**.
