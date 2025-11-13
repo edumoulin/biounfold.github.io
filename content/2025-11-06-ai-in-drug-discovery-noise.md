@@ -23,7 +23,7 @@ Broadly, there are three families of strategies to handle noise:
 We will look at each briefly, then focus on curation — where most discovery teams spend their time.
 
 
-### 1. More data — the brute-force approach
+#### 1. More data — the brute-force approach
 
 Getting more data is often the easiest answer, and it works — up to a point.  
 In one screening pipeline I co-developed, we trained and validated models *within* a single experiment. The models never generalized beyond that screen, but that was acceptable. The goal was not a universal predictor — it was to extract the most value from *this* experiment.
@@ -34,7 +34,7 @@ A model that helps one project move forward can be more valuable than one that g
 Still, even brute force depends on disciplined curation.
 
 
-### 2. Data curation — the universal step
+#### 2. Data curation — the universal step
 
 No matter how much data we collect, biological experiments demand cleanup.
 
@@ -56,7 +56,7 @@ In practice, both often combine. Each assay type — imaging, transcriptomics, p
 > Here, AI’s role is not just denoising but **triaging uncertainty** — helping chemists decide which measurements are trustworthy enough to act on.
 
 
-### 3. Statistical modeling — the deeper layer
+#### 3. Statistical modeling — the deeper layer
 
 The most demanding approach is to model noise explicitly.  
 This means designing mathematical structures that represent not only the signal, but the uncertainty around it.
@@ -67,7 +67,7 @@ They bridge the gap between data analysis and simulation — the first step towa
 But this requires deep understanding of how experimental noise behaves — biologically and statistically.
 
 
-### From principle to practice
+#### From principle to practice
 
 These ideas only come alive when tested on data.  
 In the companion notebook, we explore a simple but powerful approach to batch correction:
@@ -80,7 +80,7 @@ You do not need large datasets to follow along; the goal is to see how biologica
 [→ Companion notebook](/assets/notebooks/bu005_alpha_batch_align.html)
 
 
-### Closing thought
+#### Closing thought
 
 Dealing with noise is not a side quest in AI-driven discovery — it *is* the quest.  
 

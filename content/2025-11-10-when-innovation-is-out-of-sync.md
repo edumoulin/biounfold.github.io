@@ -27,7 +27,7 @@ computation in early **costs time now**, but that is the time that **expands the
 biology** and lets the program **move faster later**.
 
 
-### Not a Pipeline — a Rhythm
+#### Not a Pipeline — a Rhythm
 
 In experiment-driven discovery, computation progresses through three modes:
 
@@ -51,7 +51,7 @@ discovery.**
 Most real programs use these modes in parallel rather than sequentially.
 
 
-### Example: Immunofluorescent Screening
+#### Example: Immunofluorescent Screening
 
 In immunofluorescent screens I have worked on, preprocessing and normalization could eventually be automated end-to-end.  
 However, the QC validation — the before/after plots, plate drift checks, and feature distribution sanity checks — remained manual. The workflow was structured and repeatable, but still reviewed by a scientist.
@@ -69,7 +69,7 @@ Automation is not the goal.
 **Automation is what you do once the thinking is done.**
 
 
-### Where Teams Go Wrong
+#### Where Teams Go Wrong
 
 Misalignment happens when automation is introduced **before** repeatable interpretation exists.  
 In that case, software freezes uncertainty into the workflow — and teams end up spending more time fighting the tool than learning from the experiment.
@@ -81,7 +81,7 @@ This slows learning and makes collaboration fragile.
 The art is in knowing when to shift the cadence.
 
 
-### A Simple Way to Find the Right Tempo
+#### A Simple Way to Find the Right Tempo
 
 Take your current program and ask:
 
