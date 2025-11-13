@@ -30,8 +30,6 @@ Drug design is always **multi-parameter**. Improving one property often worsens 
 
 These trade-offs are not mistakes — they are the **work**.
 
----
-
 #### A Practical Example
 
 In a recent project, potency against the primary target was achieved early in lead optimization.  
@@ -41,8 +39,6 @@ Every gain in solubility reduced activity; restoring activity reduced solubility
 
 The work was not finding “the best model.”  
 The work was **making the trade-off intentional**.
-
----
 
 #### Toxicology Is About Context
 
@@ -61,8 +57,6 @@ This reduces the risk of interfering with essential functions elsewhere.
 
 And when these risks are uncertain, **cell-based phenotypic screens** help validate whether the molecule’s overall behavior is tolerable — not at every cycle, but at **key turning points** where the chemistry meaningfully shifts.
 
----
-
 #### Where AI Helps Today
 
 The most useful AI systems in chemistry today do not replace decisions.  
@@ -76,8 +70,6 @@ This does not eliminate experimentation —
 it **makes the next experiment better**.
 
 > **AI expands what we can try, not what we can skip.**
-
----
 
 #### A Practical Step Forward
 
