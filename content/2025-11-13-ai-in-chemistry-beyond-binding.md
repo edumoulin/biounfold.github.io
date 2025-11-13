@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "AI in Chemistry: Beyond Binding"
-date: 2025-11-07
+date: 2025-11-13
 tags: [AI / Computation, Chemistry / Design]
 ---
 
-### **BioUnfold #7 — AI in Chemistry: Beyond Binding**
+### BioUnfold #7 — AI in Chemistry: Beyond Binding
 
 ![Beyond Binding](/assets/images/biounfold-007-beyond-binding.png){: width="90%"}
 
@@ -32,7 +32,7 @@ These trade-offs are not mistakes — they are the **work**.
 
 ---
 
-### **A Practical Example**
+#### A Practical Example
 
 In a recent project, potency against the primary target was achieved early in lead optimization.  
 The real effort was **solubility**.
@@ -44,7 +44,7 @@ The work was **making the trade-off intentional**.
 
 ---
 
-### **Toxicology Is About Context**
+#### Toxicology Is About Context
 
 Toxicity rarely comes from a single bad interaction. More often, it reflects **where and when** the molecule acts.
 
@@ -63,7 +63,7 @@ And when these risks are uncertain, **cell-based phenotypic screens** help valid
 
 ---
 
-### **Where AI Helps Today**
+#### Where AI Helps Today
 
 The most useful AI systems in chemistry today do not replace decisions.  
 They **help teams explore trade-offs faster**:
@@ -79,7 +79,7 @@ it **makes the next experiment better**.
 
 ---
 
-### **A Practical Step Forward**
+#### A Practical Step Forward
 
 If you are integrating AI into chemistry workflows, one shift helps:
 
