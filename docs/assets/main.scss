@@ -3,6 +3,7 @@
 ---
 
 @import "minima";
+:root { color-scheme: light; } /* hints to the browser/UI controls */
 
 .page-content { padding: 60px 0; flex: 1; }
 
@@ -183,14 +184,6 @@ em.unfold {
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  .about-photo {
-    border-color: rgba(255,255,255,0.1);
-    filter: grayscale(30%) brightness(1.05);
-  }
-}
-
 /* Pagination */
 .pagination {
   display: flex;
@@ -257,15 +250,6 @@ em.unfold {
   border-color: rgba(0,0,0,0.4);
 }
 
-@media (prefers-color-scheme: dark) {
-  .contact-form input,
-  .contact-form textarea {
-    background: #111;
-    border-color: rgba(255,255,255,0.18);
-    color: #eee;
-  }
-}
-
 /* ================================
    BioUnfold — Tiny fixed footer
    ================================ */
@@ -312,13 +296,6 @@ em.unfold {
   opacity: .5;
   margin: 0 .4rem;
 }
-
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  .site-footer { color: #ccc; }
-  .footer-sep { opacity: .35; }
-}
-
 
 
 // Posts
@@ -513,15 +490,5 @@ h4.post-title,
     border-radius: 0;
   }
   .home .post-card__body { padding: .85rem 1rem 1rem; }
-}
-
-/* Optional dark mode */
-@media (prefers-color-scheme: dark) {
-  .home .post-card { background: #111; border-color: rgba(255,255,255,.08); }
-  .home .post-card:hover { box-shadow: 0 6px 18px rgba(0,0,0,.3); }
-  .home .post-card__excerpt { color: #ddd; }
-  .home .tag { color: #e6e6e6; border-color: rgba(255,255,255,.16); }
-  .home .tag-btn { border-color: rgba(255,255,255,.2); color: #eee; }
-  .home .tag-btn.is-active { border-color: #fff; }
 }
 
