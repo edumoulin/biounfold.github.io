@@ -2,7 +2,7 @@
 layout: post
 title: "When Innovation Is Out of Sync"
 date: 2025-11-10
-tags: [Strategy / Market, AI / Computation]
+tags: [Strategy / Platforms, AI / Computation]
 image: /assets/images/biounfold-006-start-ai-early.png
 ---
 

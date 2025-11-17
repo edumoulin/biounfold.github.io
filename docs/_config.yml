@@ -8,9 +8,20 @@ markdown: kramdown
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
+  - jekyll-sitemap
 minima:
   skin: auto
 author: Etienne Dumoulin
 github_url: https://github.com/edumoulin/biounfold.github.io/
 linkedin_url: https://www.linkedin.com/in/%C3%A9tienne-dumoulin-624a9624/
+url: "https://biounfold.ai"
 baseurl: ""
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      image: "/assets/images/biounfold-logo-800x800.png"   # fallback image (800x800)
+      seo:
+        type: "article"

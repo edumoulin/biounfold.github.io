@@ -3,6 +3,7 @@ layout: post
 title: "Choosing the Right Foundation for Biology"
 date: 2025-11-17
 tags: [AI / Computation, Strategy / Platforms]
+image: /assets/images/biounfold-008-coverage-context.png
 ---
 
 ### BioUnfold #8 — Choosing the Right Foundation for Biology

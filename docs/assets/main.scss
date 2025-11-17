@@ -4,6 +4,28 @@
 
 @import "minima";
 
+.page-content { padding: 60px 0; flex: 1; }
+
+/* 1) Sticky, minimal site header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: saturate(160%) blur(6px);
+  background: rgba(255, 255, 255, 0.82);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  min-height: 30px;
+}
+.site-header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 56px;
+  gap: 1rem;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+}
+
 .site-title { letter-spacing: 0; word-spacing: 0;}
 
 /* Treat the whole wordmark as one typographic unit */
@@ -69,11 +91,12 @@ em.unfold {
 
 /* Right: external links */
 .site-nav.external .ext-links {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: .5rem;
   font-weight: 500;
 }
+
 .site-nav.external a {
   text-decoration: none;
 }
@@ -85,6 +108,19 @@ em.unfold {
 /* Keep burger section visually separate on small screens */
 .nav-burger {
   margin-top: .25rem;
+}
+
+/* Each icon-link is a perfect square, centered visually */
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  line-height: 1;          /* neutralize inherited line-height */
+  color: inherit;
+  border-radius: 50%;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 /* Responsive: on very small screens stack brand/top bar neatly */
@@ -125,6 +161,167 @@ em.unfold {
   color: #f26522; /* classic RSS orange */
 }
 
+.about-photo {
+  float: left;
+  width: 100px;                /* choose a size that feels balanced with text */
+  height: 100px;
+  border-radius: 50%;          /* ← this makes it a perfect circle */
+  object-fit: cover;           /* ensures the face fills the circle */
+  object-position: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: #f5f5f5;         /* soft backdrop while loading */
+  filter: grayscale(15%);      /* optional: keeps it understated */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  margin-right: 10px;
+}
+
+/* Optional hover effect */
+.about-photo:hover {
+  filter: none;
+  transform: scale(1.02);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .about-photo {
+    border-color: rgba(255,255,255,0.1);
+    filter: grayscale(30%) brightness(1.05);
+  }
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 2rem 0;
+}
+.pagination .page {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  color: inherit;
+}
+.pagination .current {
+  background-color: #f0f0f0;
+  font-weight: 600;
+  border-color: #ccc;
+}
+
+
+
+/* ================================
+   BioUnfold — Contact form styles
+   ================================ */
+
+.contact-form {
+  display: grid;
+  gap: 0.9rem;
+  max-width: 640px;
+  margin-top: 1rem;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 0.3rem;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid rgba(0,0,0,0.18);
+  border-radius: 8px;
+  font: inherit;
+  background: #fff;
+}
+
+.contact-form button.btn {
+  justify-self: end;      /* move the Send button to the right edge */
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.2);
+  background: rgba(255,255,255,0.9);
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease;
+}
+
+
+.contact-form button.btn:hover {
+  background: rgba(0,0,0,0.05);
+  border-color: rgba(0,0,0,0.4);
+}
+
+@media (prefers-color-scheme: dark) {
+  .contact-form input,
+  .contact-form textarea {
+    background: #111;
+    border-color: rgba(255,255,255,0.18);
+    color: #eee;
+  }
+}
+
+/* ================================
+   BioUnfold — Tiny fixed footer
+   ================================ */
+
+/* Sticky, minimal site footer (mirrors .site-header) */
+.site-footer {
+  position: fixed;             /* sticky-like, but at the bottom */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  backdrop-filter: saturate(160%) blur(6px);
+  background: rgba(255, 255, 255, 0.82);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 0.85rem;
+  color: #444;
+  padding: 10px
+}
+
+.site-footer .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;     /* center the single RSS link */
+  gap: 0.5rem;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  line-height:1.2;
+}
+
+.site-footer a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted transparent;
+  transition: border-color .15s ease;
+}
+.site-footer a:hover {
+  border-color: currentColor;
+}
+.footer-text {
+  margin: 0;
+  text-align: center;
+}
+.footer-sep {
+  opacity: .5;
+  margin: 0 .4rem;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .site-footer { color: #ccc; }
+  .footer-sep { opacity: .35; }
+}
+
+
+
+// Posts
 /* Base text: professional, modern, legible */
 body blockquote{
   font-family: 'Source Sans 3', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -193,5 +390,138 @@ h4.post-title,
   border: none;                  /* remove default styles */
   border-top: 1px solid #cccccc; /* same soft grey as the h4 bar */
   margin: 2rem 0;                /* balanced spacing above and below */
+}
+
+
+/* ================================
+   BioUnfold — Home page styling (1200×639 images)
+   ================================ */
+
+.home .post-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.home .post-card {
+  list-style: none;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 12px;
+  background: #fff;
+  overflow: hidden;
+  transition: box-shadow .15s ease, border-color .15s ease;
+  align-items: stretch;
+}
+.home .post-card:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+  border-color: rgba(0,0,0,.12);
+}
+
+/* Two-column layout: image left, text right */
+.home .post-card__link {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: 150px 1fr;
+  gap: 1.75rem;                     /* push text a bit more to the right */
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.9rem 1rem;
+}
+
+/* Image wrapper: exact 1200x639 ratio (== 400/213) */
+.home .post-card__media {
+  display: flex;                    /* allows centering if needed */
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;                  /* image never exceeds card width */
+  height: auto;                     /* height adjusts automatically */
+  overflow: hidden;                 /* hide anything overflowing (rare with contain) */
+  border-radius: 8px;
+  background: #f5f5f5;
+  box-shadow: inset 0 0 1px rgba(0,0,0,.06);
+  padding: 0;                       /* ensure no accidental spacing */
+}
+
+/* Image fills wrapper without distortion (no crop since ratios match) */
+.home .post-card__thumb {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;                 /* same ratio => no cropping, just fill */
+  object-position: center;
+  transition: transform .25s ease;
+}
+.home .post-card:hover .post-card__thumb { transform: scale(1.012); }
+
+/* If a post has no image */
+.home .post-card__thumb.placeholder { background: #eee; }
+
+/* Right column */
+.home .post-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  padding-right: .25rem;
+}
+.home .post-card__title { margin: 0; font-size: 1.15rem; line-height: 1.25; }
+.home .post-card__meta  { margin: 0; color: #666; font-size: .9rem; }
+.home .post-card__excerpt { margin: .15rem 0 .25rem 0; color: #333; }
+
+/* Tags + filter */
+.home .post-card__tags,
+.home .post-tags {
+  list-style: none; padding: 0; margin: .25rem 0 0;
+  display: flex; flex-wrap: wrap; gap: .4rem;
+}
+.home .tag {
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 999px;
+  padding: .15rem .55rem;
+  font-size: .8rem; line-height: 1.2; color: #333;
+  white-space: nowrap;
+}
+.home .tag-filter {
+  display: flex; gap: .5rem; flex-wrap: wrap; margin: 1rem 0 1.25rem;
+}
+.home .tag-btn {
+  border: 1px solid rgba(0,0,0,.15);
+  background: transparent;
+  padding: .35rem .7rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: .85rem;
+}
+.home .tag-btn.is-active { border-color: #111; }
+
+.home .rss-subscribe { margin-top: 1rem; }
+
+/* Responsive */
+@media (max-width: 860px) {
+  .home .post-card__link { grid-template-columns: 240px 1fr; gap: 1.5rem; }
+}
+@media (max-width: 720px) {
+  .home .post-card__link {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0;
+  }
+  .home .post-card__media {
+    aspect-ratio: 1200 / 639;        /* keep exact ratio on mobile too */
+    border-radius: 0;
+  }
+  .home .post-card__body { padding: .85rem 1rem 1rem; }
+}
+
+/* Optional dark mode */
+@media (prefers-color-scheme: dark) {
+  .home .post-card { background: #111; border-color: rgba(255,255,255,.08); }
+  .home .post-card:hover { box-shadow: 0 6px 18px rgba(0,0,0,.3); }
+  .home .post-card__excerpt { color: #ddd; }
+  .home .tag { color: #e6e6e6; border-color: rgba(255,255,255,.16); }
+  .home .tag-btn { border-color: rgba(255,255,255,.2); color: #eee; }
+  .home .tag-btn.is-active { border-color: #fff; }
 }
 

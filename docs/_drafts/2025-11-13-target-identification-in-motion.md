@@ -2,8 +2,8 @@
 layout: post
 title: "Target Identification in Motion"
 date: 2025-11-14
-tags: [Biology / Target ID, AI / Computation, Strategy / Platforms]
-image: /assets/images/biounfold-009-target-identification.png
+tags: [Biology / Experimentation, AI / Computation, Strategy / Platforms]
+image: /assets/images/biounfold-009-target-fitness-map.png
 ---
 
 ### BioUnfold #9 — Target Identification in Motion

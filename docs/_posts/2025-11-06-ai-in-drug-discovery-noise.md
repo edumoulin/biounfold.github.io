@@ -3,7 +3,7 @@ layout: post
 title: "AI in Drug Discovery — or the Art of Dealing with Noise"
 date: 2025-11-06
 tags: [AI / Computation]
-image: /assets/images/biounfold-005-ai-in-drug-discovery-noise.png
+image: /assets/images/biounfold-005-figure-batch-align-grid-linkedin.png
 ---
 
 ### BioUnfold #&#8203;5 — AI in Drug Discovery, or the Art of Dealing with Noise

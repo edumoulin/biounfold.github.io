@@ -3,6 +3,7 @@ layout: post
 title: "Choosing the Right Foundation for Biology"
 date: 2025-11-17
 tags: [AI / Computation, Strategy / Platforms]
+image: /assets/images/biounfold-008-coverage-context.png
 ---
 
 ### BioUnfold #8 — Choosing the Right Foundation for Biology
@@ -13,7 +14,7 @@ In the last two years, *foundation model* has become a default aspiration. Every
 
 That can be valuable — but not always.
 
-The decision to train a foundation model is less about ambition and more about **fit**:  
+The decision to train a foundation model is less about ambition and more about fit:  
 what problem are you trying to solve, and what is missing from the models that already exist?
 
 #### Two Kinds of Motivation
@@ -32,7 +33,7 @@ A foundation model only helps if your data add **coverage** or **context** that 
 Coverage means new biological regimes: a rare organism, a novel assay, or an unstudied disease area.  
 Context means richer annotation — repeated or aligned observations that reveal relationships others could not learn.
 
-In **omics**, this pattern is becoming clear. Public repositories already capture much of the accessible space, and large open models trained on them perform well. The advantage now comes from *contextual depth* — hospital partnerships, disease-specific cohorts, longitudinal samples. These datasets do not replace foundation models; they *extend* them, grounding predictions in real patient biology.
+In **omics**, this pattern is becoming clear. Public repositories already capture much of the accessible space, and large open models trained on them perform well. The advantage now comes from contextual depth — hospital partnerships, disease-specific cohorts, longitudinal samples. These datasets do not replace foundation models; they extend them, grounding predictions in real patient biology.
 
 In **cell imaging**, particularly immunofluorescence, the trajectory is less certain. Models pre-trained on generic natural images transfer surprisingly well. Specialized IF encoders show published gains, but adoption remains limited. The constraint is often not model architecture but label balance, staining variation, and how images relate to underlying biology. A hybrid approach — combining general visual knowledge with biological calibration — may prove more effective than training from scratch.
 

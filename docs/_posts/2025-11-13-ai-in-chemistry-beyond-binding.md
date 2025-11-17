@@ -3,6 +3,7 @@ layout: post
 title: "AI in Chemistry: Beyond Binding"
 date: 2025-11-13
 tags: [AI / Computation, Chemistry / Design]
+image: /assets/images/biounfold-007-beyond-binding.png
 ---
 
 ### BioUnfold #7 — AI in Chemistry: Beyond Binding
