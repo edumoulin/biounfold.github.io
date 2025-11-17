@@ -8,7 +8,7 @@ image: /assets/images/biounfold-009-target-identification.png
 
 ### BioUnfold #9 — Target Identification in Motion
 
-![Mapping the new target space](/assets/images/biounfold-009-target-identification.png){: width="90%"}
+![Mapping the new target space](/assets/images/biounfold-009-target-fitness-map.png){: width="90%"}
 
 Target identification has always been both the **starting point** of discovery and its **final constraint**.  
 It defines what success looks like — yet it often begins with incomplete knowledge.  
@@ -51,7 +51,7 @@ Literature defines the topology, models generate hypotheses, experiments test th
 #### What Makes a Good Target
 
 AI can suggest hundreds of plausible leads. Strategy is about filtering them.  
-A strong target typically balances **specificity** (it affects the intended pathway more than others), **redundancy** (its function is not easily bypassed), **drugability** (it can be modulated by a molecule or biologic), and **novelty** (it opens unexplored biological or competitive space).  
+A strong target typically balances **specificity** (it affects the intended pathway more than others), **redundancy** (its function is not easily bypassed), **druggability** (it can be modulated by a molecule or biologic), and **novelty** (it opens unexplored biological or competitive space).  
 
 AI helps quantify these dimensions — predicting binding surfaces, causal dependencies, and network centrality.  
 Yet **biological judgment** remains decisive: a model can rank importance, but only a biologist can judge viability.  
