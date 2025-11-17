@@ -10,7 +10,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 minima:
-  skin: auto
+  skin: classic
 author: Etienne Dumoulin
 github_url: https://github.com/edumoulin/biounfold.github.io/
 linkedin_url: https://www.linkedin.com/in/%C3%A9tienne-dumoulin-624a9624/
