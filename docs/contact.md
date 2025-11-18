@@ -15,7 +15,7 @@ I read every submission — please include your email if you would like a reply.
 
   <label>
     Your email
-    <input type="email" name="_replyto" required>
+    <input type="email" name="_replyto">
   </label>
 
   <label>
