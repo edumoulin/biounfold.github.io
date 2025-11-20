@@ -17,8 +17,6 @@ Traditionally, it meant finding a biomolecule to modulate: a receptor, enzyme, o
 
 Today, AI and large-scale data are shifting what “a target” can be — and how we judge that it matters.
 
----
-
 #### The Two Pillars of Target Evidence
 
 A convincing target rests on two forms of evidence:  
@@ -28,8 +26,6 @@ AI is helping both. Mechanistic links are now inferred not only from literature 
 Dynamic context increasingly comes from single-cell and spatial datasets, where AI can align heterogeneous signals into coherent patterns.  
 
 What used to be a static hypothesis (“this protein drives X”) becomes a **living model of biological behavior.**
-
----
 
 #### Three Modern Approaches
 
@@ -46,8 +42,6 @@ Target identification is an *exploratory exercise* — it can absorb infinite ti
 The most forward teams treat these not as alternatives but as **feedback loops**.  
 Literature defines the topology, models generate hypotheses, experiments test them, and data refine the next iteration.
 
----
-
 #### What Makes a Good Target
 
 AI can suggest hundreds of plausible leads. Strategy is about filtering them.  
@@ -60,8 +54,6 @@ AI also helps with **characterization and quantification**. In phenotypic data, 
 
 The scale of such work varies widely. A CRISPR screen may probe thousands of genes, while a high-content imaging campaign can cover hundreds of thousands of conditions. The data footprint grows faster than the interpretability, which is exactly where AI can help extract structure without losing meaning.
 
----
-
 #### The New Possibilities
 
 AI is not just speeding up discovery; it is **expanding what counts as a target.**  
@@ -72,8 +64,6 @@ Foundation models learn abstract “axes of vulnerability” — not just molecu
 
 This reframes target identification from a *search* problem to a *mapping* one.  
 Instead of asking “which molecule causes this disease,” we now ask “where in the system can intervention most effectively reshape biology?”  
-
----
 
 #### Where Biology Still Leads
 
@@ -92,8 +82,6 @@ AI defines a plausible mechanism, and experiments test whether it exists.
 Each direction — *biology-first* or *model-first* — is valid.  
 
 The future of target identification likely lies **in the dialogue between the two** — a dialogue that rarely happens inside a single organization. It happens through the literature — one group’s biology becoming another’s model, and vice versa.
-
----
 
 #### Planning from the End
 
