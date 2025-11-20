@@ -25,12 +25,6 @@
 # ---
 
 # %%
-import matplotlib.patheffects as path_effects
-
-# %%
-from matplotlib import colors
-
-# %%
 # ------------------------------------------------------------
 # BioUnfold #10 — "Assay Reliability Space" (Density Map)
 # ------------------------------------------------------------
@@ -49,15 +43,17 @@ from matplotlib import colors
 #   reliability must be *measured* and outranks transparency.
 #
 # Design:
-#   - Single-plot matplotlib figure (no seaborn, no explicit colors).
+#   - Single-plot matplotlib figure.
 #   - No spines; minimal ticks.
 #   - Contours + dashed threshold for the "Reliable zone".
 #   - Example points annotate typical assay philosophies.
 # ------------------------------------------------------------
 
 import numpy as np
+from matplotlib import colors
 import matplotlib.pyplot as plt
 from matplotlib.patches import Ellipse
+import matplotlib.patheffects as path_effects
 
 def reliability_score(x, y):
     """
@@ -88,9 +84,7 @@ def make_biounfold_010_reliability_space(
         "Reliability is measurable — through controls, QC, and replicates."
     ),
     reliable_threshold=0.60,
-    ellipse_center=(0.80, 0.90),
-    ellipse_width=0.32,
-    ellipse_height=0.28,
+    reliable_center=(0.80, 0.90),
     add_examples=True,
 ):
     """
@@ -102,7 +96,7 @@ def make_biounfold_010_reliability_space(
         title: Plot title.
         caption: Explanatory caption under the axis.
         reliable_threshold: Contour level for reliable-zone threshold (0..1).
-        ellipse_center, ellipse_width, ellipse_height: Visual emphasis for the 'Reliable zone'.
+        reliable_center: 'Reliable zone' position.
         add_examples: If True, annotate example assay philosophies.
         save_png_path, save_svg_path: File paths; if provided, will save outputs.
 
@@ -124,9 +118,9 @@ def make_biounfold_010_reliability_space(
     BuGn_custom = colors.LinearSegmentedColormap.from_list(
         "BuGn_custom",
         [
-            (0.00, (0.10, 0.25, 0.60)),  # deep blue
-            (0.50, (0.00, 0.60, 0.65)),  # teal (transition zone)
-            (1.00, (0.10, 0.70, 0.30)),  # stable green (reliable)
+            (0.00, (0.40, 0.55, 0.85)),  # light blue
+            (0.50, (0.00, 0.60, 0.65)),  # teal
+            (1.00, (0.10, 0.70, 0.30)),  # green
         ],
         N=256,
     )
@@ -139,15 +133,11 @@ def make_biounfold_010_reliability_space(
 
     # Contours (structure) + threshold (reliable zone)
     cs = ax.contour(X, Y, Z, levels=np.linspace(0.1, 0.9, 9), linewidths=0.6, alpha=0.8)
-    # ax.clabel(cs, inline=True, fontsize=8, fmt="%.2f")
-    ax.contour(X, Y, Z, levels=[reliable_threshold], linewidths=1.8, linestyles="--")
+    ax.contour(X, Y, Z, levels=[reliable_threshold], linewidths=1.8, linestyles="--", colors=["white"])
 
     # Highlight "Reliable zone" with a soft ellipse
-    #ellipse = Ellipse(ellipse_center, ellipse_width, ellipse_height, angle=0, fill=True, alpha=0.12)
-    #ax.add_patch(ellipse)
-    #ax.text(ellipse_center[0], ellipse_center[1] + 0.03, "Reliable zone", ha="center", va="center", fontsize=11)
     ax.text(
-        ellipse_center[0], ellipse_center[1] + 0.03, "Reliable zone",
+        reliable_center[0], reliable_center[1] + 0.03, "Reliable zone",
         ha="center", va="center", fontsize=12, weight="bold", color="white",
         path_effects=[
             path_effects.withStroke(linewidth=2.5, foreground="black", alpha=0.6)
@@ -180,10 +170,6 @@ def make_biounfold_010_reliability_space(
     ax.set_title(title, pad=14, fontsize=14)
 
     # Clean frame
-    #for sp in ax.spines.values():
-    #    sp.set_visible(False)
-    #ax.set_xticks([0.0, 0.25, 0.5, 0.75, 1.0])
-    #ax.set_yticks([0.0, 0.25, 0.5, 0.75, 1.0])
     ax.set_xticks([]); ax.set_yticks([])
     ax.grid(False)
 
@@ -194,7 +180,6 @@ def make_biounfold_010_reliability_space(
 
 
     return fig, ax
-
 
 fig, ax = make_biounfold_010_reliability_space(
     reliable_threshold=0.60,

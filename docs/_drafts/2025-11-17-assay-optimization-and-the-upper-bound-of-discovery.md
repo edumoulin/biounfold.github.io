@@ -17,8 +17,7 @@ It is where *“how do we test this?”* quietly decides whether an idea will ev
 
 #### From Hypothesis to Measurement
 
-Most assays begin the same way: 
-> “If we reduce this transcription factor, tumor proliferation should decrease.”
+Most assays begin the same way: *If we reduce this transcription factor, tumor proliferation should decrease.*
 
 That logic already defines the **signal type** — an imaging assay measuring
 nuclear intensity, perhaps normalized to cell count. This framing works; almost
@@ -55,8 +54,7 @@ craftsmanship** and **signal engineering**.
 
 #### The Trade-offs
 
-Every optimization effort faces the same question: 
-> How many channels or stains should we include?
+Every optimization effort faces the same question: *How many channels or stains should we include?*
 
 More channels increase what the model can learn, but they add cost and
 complexity. Sometimes an extra stain improves performance by only a few
