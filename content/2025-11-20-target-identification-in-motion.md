@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Target Identification in Motion"
-date: 2025-11-14
+date: 2025-11-20
 tags: [Biology / Experimentation, AI / Computation, Strategy / Platforms]
 image: /assets/images/biounfold-009-target-fitness-map.png
 ---
