@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Assay Optimization and the Upper Bound of Discovery"
-date: 2025-11-17
-tags: [Biology / Experimentation, AI / Computation, Strategy / Platforms]
+date: 2025-11-27
+tags: [Biology / Experimentation, AI / Computation]
 image: /assets/images/biounfold-010-assay-reliability-space.png
 ---
 
