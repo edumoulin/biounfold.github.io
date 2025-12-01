@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hit Discovery: From Diagnosis to Prediction"
-date: 2025-11-25
+date: 2025-12-01
 tags: [Biology / Experimentation, AI / Computation]
 image: /assets/images/biounfold-011-from-diagnosis-to-prediction.png
 ---
