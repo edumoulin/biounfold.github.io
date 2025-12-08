@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "BioUnfold #12 — Lead Optimization: Learning the Chemistry"
+title: "Lead Optimization: Learning the Chemistry"
 date: 2025-12-01
 tags: [Chemistry / Design, AI / Computation]
 image: /assets/images/biounfold-012-learning-the-chemistry.png
@@ -10,7 +10,7 @@ image: /assets/images/biounfold-012-learning-the-chemistry.png
 
 Lead optimization is where discovery becomes engineering. It is the careful process of turning an active molecule — often unstable, imperfect, and biologically complex — into something that can survive the full environment of the body.
 
-In BioUnfold #7, I wrote about how AI can help chemists think beyond binding and optimize the whole molecule. Here, the focus is not on the property space itself but on the *process*: how learning and chemistry interact inside the DMTA loop.
+In [BioUnfold #7](https://biounfold.ai/2025/11/13/ai-in-chemistry-beyond-binding.html), I wrote about how AI can help chemists think beyond binding and optimize the whole molecule. Here, the focus is not on the property space itself but on the *process*: how learning and chemistry interact inside the DMTA loop.
 
 #### From Hit Discovery to Lead Optimization
 
@@ -46,22 +46,14 @@ A good DMTA pipeline treats model output not as “the molecules to make,” but
 
 #### Thin Data, Practical Constraints, and the Need for Discipline
 
-At the start of lead optimization, teams often have fewer than 20 analogs per chemotype with measured activity. Structure–activity relationships are faint. Data are noisy. Models cannot yet distinguish signal from artefact — not because they are weak, but because the biology has not expressed its shape.
+At the start of lead optimization, teams often have fewer than twenty analogs per chemotype with measured activity. Structure–activity relationships are faint. Data are noisy. Models cannot yet distinguish signal from artefact — not because they are weak, but because the biology has not expressed its shape.
 
 Assay strategy widens this gap:
 
-- Fast, inexpensive biochemical binding assays offer rapid feedback on potency and scaffold viability, but ignore permeability, metabolism, and emergent cellular mechanisms.  
-- Cell-based assays are slower and more expensive but essential when the mechanism is incomplete, polypharmacology is expected, or the therapeutic effect only emerges in a cellular context.
+- **Biochemical binding assays** provide a direct, mechanistic readout of target engagement (Kd, Ki, IC₅₀). Their key advantage is not just speed, but that the signal is relatively clean and unambiguous. In favourable cases, computational models trained on consistent binding data can approach the reproducibility of the assay itself. Once this alignment is established, the model can safely pre-filter large design spaces, dramatically accelerating which molecules are even considered for synthesis.  
+- **Cell-based assays** are slower and more resource-intensive, but capture permeability, metabolism, polypharmacology, and emergent cellular mechanisms. They become essential when the mechanism is incomplete, multiple targets are likely to matter, or the therapeutic effect only appears in a cellular context.
 
-Most programs therefore combine both: the fast assay provides breadth, the cell assay provides biological truth. This split defines the early DMTA cadence as much as any chemistry decision.
-
-In this regime, early AI should not attempt precise design. It should:
-
-1. Apply project-specific static filters (Ro5 heuristics, aromatic ring limits, solubility thresholds, toxicophore removal).  
-2. Prioritize chemically diverse proposals, not targeted optimizations.  
-3. Reflect chemist priorities, rather than generate unconstrained novelty.
-
-The goal of the first cycles is not to find the best molecule — it is to reveal **what chemical space the biology will accept**.
+Most programs therefore combine both: the binding assay provides reliable signal and a calibration target for models, while the cell assay provides biological truth. Together, they define the early DMTA cadence as much as any chemistry decision.
 
 #### Models Must Move at the Pace of Chemistry
 
@@ -86,20 +78,27 @@ Not all cycles are equal:
 - Favor exploration  
 - Allow larger structural jumps  
 - Accept low probability of success for high information gain  
-- Focus on mapping constraints, not refining potency
+- Focus on mapping constraints, not refining potency  
+
+In the earliest cycles, the priority is to apply project-specific static filters (Ro5 heuristics, aromatic ring limits, solubility thresholds, toxicophore removal), because very little data is available.  
+As the cycle progresses, these filters become more sophisticated as the team begins to understand what the biology will accept.
 
 ##### Middle cycles  
 - Integrate model guidance  
 - Explore trade-offs (potency vs solubility, permeability vs clearance)  
-- Balance risk and tractability
+- Balance risk and tractability  
+
+Once enough data accumulates, a generative model can be trained.  
+The model should be **modulable**, allowing team priorities to become explicit inputs that steer the search process.
 
 ##### Late cycles  
 - Prioritize exploitation  
 - Make smaller, controlled changes  
 - Focus on PK, safety, stability, and developability  
-- Use generative models to refine, not reinvent
+- Use generative models to refine, not reinvent  
 
-A healthy DMTA system implicitly has a **temperature parameter** — high early, cooling over time. Most AI pipelines ignore this, leading to misalignment between model novelty and chemical feasibility.
+A healthy DMTA system implicitly has a **temperature parameter** — high in the early phase, cooling as decisions become more constrained.  
+Most AI pipelines ignore this progression, generating excessive novelty late in programs or over-exploiting too early, leading to misalignment between model behaviour and chemical feasibility.
 
 #### Bridging the Tempo Gap Between Chemistry and Data Science
 
