@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Lead Optimization: Learning the Chemistry"
-date: 2025-12-01
+date: 2025-12-08
 tags: [Chemistry / Design, AI / Computation]
 image: /assets/images/biounfold-012-learning-the-chemistry.png
 ---
