@@ -78,6 +78,8 @@ When models update at the same cadence as experiments, DMTA becomes a coherent l
 
 #### Exploration vs. Exploitation Across the DMTA Lifecycle
 
+![Exploration vs. Exploitation](/assets/images/biounfold-012-learning-the-chemistry.png){: width="90%"}
+
 Not all cycles are equal:
 
 ##### Early cycles  
