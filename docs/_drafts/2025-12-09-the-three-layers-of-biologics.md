@@ -22,6 +22,8 @@ Biologics are therapeutics produced by cells as factories, not chemical synthesi
 
 Three layers capture the landscape.
 
+![The three layers: Summary Table](/assets/images/biounfold-013-sum-table.png)
+
 ##### 1. Extracellular Biologics
 
 **Examples:** antibodies, bispecifics, cytokine therapies, receptor traps, CAR-T recognition domains
@@ -54,8 +56,7 @@ These therapeutics act inside the cell, altering transcription, translation, or 
 
 - Can modulate almost any intracellular process  
 - Sequence defines function, enabling rapid design cycles  
-- mRNA vaccines demonstrated global-scale manufacturability  
-- siRNA and antisense oligonucleotides (ASO) therapies offer precise gene silencing  
+- siRNA therapies offer precise gene silencing  
 
 **Constraints**
 
@@ -64,7 +65,7 @@ These therapeutics act inside the cell, altering transcription, translation, or 
 - Effects are transient unless re-dosed  
 - Enzyme therapies must navigate stability and trafficking challenges  
 
-Here, the central question is what mechanism the cell should execute. Once that is defined, the remaining challenge is delivering the payload to the right place.
+Here, the central question is what mechanism the cell should execute. Once that is defined, the remaining challenge is delivering the payload to the right cell and compartment.
 
 ##### 3. Genome-Level Biologics
 
@@ -87,6 +88,8 @@ These interventions modify DNA itself or deliver genes for long-term expression.
 
 Genome-level biologics do not adjust cellular state—they redefine the functional capacity of a tissue.
 
+These layers are not static; innovation happens at their boundaries.
+
 #### What Comes Next: The Expanding Edge of Living Drugs
 
 New modalities are emerging at the boundaries of these layers.
@@ -98,7 +101,7 @@ Bring extracellular precision together with intracellular effect.
 Extend extracellular biologics into controlled degradation of surface proteins.
 
 **Programmable RNA medicines**  
-From COVID-19 mRNA vaccines to emerging therapeutics, RNA is becoming a programmable medium: a short-lived instruction set that tells cells what protein to produce. As delivery systems improve, RNA is moving toward modular, distributed control of cellular behaviour.
+mRNA and antisense oligonucleotides use RNA as an instruction layer, enabling sequence-directed expression or modulation. These transient interventions sit within the intracellular layer but reflect a mindset closer to genome-level design.
 
 Biologics are shifting from static molecules to orchestrated systems — designed to bind, enter, edit, or signal.
 
@@ -108,7 +111,8 @@ It is tempting to treat drug discovery as one optimisation problem. It is not.
 
 **Small molecules** operate in a space of exploration: vast chemical possibilities, incomplete mechanisms, emergent ADME, and nonlinear structure–activity relationships.
 
-**Biologics** operate in structured spaces shaped by evolution. Targets must be accessible, mechanisms must be understood, and delivery and manufacturing often dominate feasibility.
+
+**Biologics** operate in structured spaces shaped by evolution. Their specificity is often intrinsic: structure, sequence, and biological constraints guide how they bind and what they affect. These modalities also inhabit defined architectures — antibodies, RNAs, and viral vectors are not expansive chemical spaces but engineered variants of biological scaffolds. Yet they share a common limitation: delivery. Whether through tissue penetration, cellular uptake, or vector tropism, getting a biologic to the right place often determines what is feasible at all.
 
 Most importantly, extracellular and genome-level biologics can do things chemistry cannot do at all — surface modulation, gene expression, gene repair, engineered cellular behaviour.
 
