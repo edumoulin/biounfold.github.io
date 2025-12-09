@@ -350,6 +350,13 @@ h4.post-title,
   padding-left: 0.6rem;
 }
 
+.page-content h5 {
+  font-weight: 450;       /* slightly stronger but not full bold */
+  font-size: 1.03rem;
+  color: #222;            /* deeper tone */
+}
+
+
 /* Subtle separation for long essays */
 .post-content hr {
   margin: 2.5rem 0;
