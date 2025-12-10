@@ -109,7 +109,7 @@ Biologics are shifting from static molecules to orchestrated systems — designe
 
 It is tempting to treat drug discovery as one optimisation problem. It is not.
 
-**Small molecules** operate in a space of exploration: vast chemical possibilities, incomplete mechanisms, emergent ADME, and nonlinear structure–activity relationships.
+**Small molecules** operate in a space of exploration: vast chemical possibilities, incomplete mechanisms, complex ADME behaviour, and nonlinear structure–activity relationships.
 
 
 **Biologics** operate in structured spaces shaped by evolution. Their specificity is often intrinsic: structure, sequence, and biological constraints guide how they bind and what they affect. These modalities also inhabit defined architectures — antibodies, RNAs, and viral vectors are not expansive chemical spaces but engineered variants of biological scaffolds. Yet they share a common limitation: delivery. Whether through tissue penetration, cellular uptake, or vector tropism, getting a biologic to the right place often determines what is feasible at all.
