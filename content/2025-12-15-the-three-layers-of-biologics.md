@@ -2,9 +2,9 @@
 layout: post
 title: "The Three Layers of Biologics"
 subtitle: "How Extracellular, Intracellular, and Genomic Mechanisms Shape Therapeutic Design"
-date: 2025-12-12
-tags: [Biologics, Strategy, AI / Computation]
-image: /assets/images/biounfold-013-three-layers.png
+date: 2025-12-15
+tags: [Biology / Experimentation, Strategy / Market]
+image: /assets/images/biounfold-013-sum-table.png
 ---
 
 ### BioUnfold #13 — The Three Layers of Biologics
@@ -28,7 +28,7 @@ Three layers capture the landscape.
 
 **Examples:** antibodies, bispecifics, cytokine therapies, receptor traps, CAR-T recognition domains
 
-These biologics act **outside the cell** or on the **cell surface**, where targets are physically accessible and structure–function rules are relatively predictable.
+These biologics act outside the cell or on the cell surface, where targets are physically accessible and structure–function rules are relatively predictable.
 
 **Opportunities**
 
