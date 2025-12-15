@@ -5,6 +5,10 @@ tagline: "Reveal Possibilities"
 description: Practical insights where AI, biology, and chemistry meet.
 theme: minima
 markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  math_engine_opts:
+    preview: false
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
