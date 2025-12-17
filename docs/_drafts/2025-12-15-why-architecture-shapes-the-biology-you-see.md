@@ -4,11 +4,13 @@ title: "Why Architecture Shapes the Biology You See"
 subtitle: "How Self-Supervision Determines What Biological Signal Becomes Visible"
 date: 2025-12-20
 tags: [AI / Machine Learning, Biology / Experimentation, Strategy / Foundations]
-image: /assets/images/biounfold-014-architecture.png
+image: /assets/images/biounfold-014-measurements-knowledge-hypothesis.png
 ---
 
 ### BioUnfold #14 — Why Architecture Shapes the Biology You See
 *How Self-Supervision Determines What Biological Signal Becomes Visible*
+
+![Measurements - Knowledge - Hypothesis](/assets/images/biounfold-014-measurements-knowledge-hypothesis.png)
 
 Self-supervised learning has become the default strategy for training foundation models in biology. It offers structure without labels, scale without annotation, and a way to align heterogeneous assays within a single representation. Yet self-supervision is not a single idea. It is a collection of architectural decisions that encode assumptions about how variation should be organized.
 
