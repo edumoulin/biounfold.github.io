@@ -1,7 +1,6 @@
 ---
 layout: null
-title: "Why Architecture Shapes the Biology You See"
-subtitle: "How Self-Supervision Determines What Biological Signal Becomes Visible"
+title: "Similarity Is Not Mechanism: Limits of Representation in Biology"
 date: 2026-01-05
 summary_for: biounfold-014-measurements-knowledge-hypothesis
 published: false

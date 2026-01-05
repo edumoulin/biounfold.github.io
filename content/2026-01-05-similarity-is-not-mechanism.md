@@ -1,14 +1,12 @@
 ---
 layout: post
-title: "Why Architecture Shapes the Biology You See"
-subtitle: "How Self-Supervision Determines What Biological Signal Becomes Visible"
+title: "Similarity Is Not Mechanism: Limits of Representation in Biology"
 date: 2026-01-05
-tags: [AI / Machine Learning, Biology / Experimentation, Strategy / Foundations]
+tags: [AI / Machine Learning, Biology / Experimentation]
 image: /assets/images/biounfold-014-measurements-knowledge-hypothesis.png
 ---
 
-### BioUnfold #14 — Why Architecture Shapes the Biology You See
-*How Self-Supervision Determines What Biological Signal Becomes Visible*
+### BioUnfold #14 — Similarity Is Not Mechanism: Limits of Representation in Biology
 
 ![Measurements - Knowledge - Hypothesis](/assets/images/biounfold-014-measurements-knowledge-hypothesis.png)
 

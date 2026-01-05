@@ -1,7 +1,6 @@
 ---
 layout: null
-title: "Why Architecture Shapes the Biology You See"
-subtitle: "How Self-Supervision Determines What Biological Signal Becomes Visible"
+title: "Similarity Is Not Mechanism: Limits of Representation in Biology"
 date: 2026-01-05
 summary_for: biounfold-014-measurements-knowledge-hypothesis
 published: false
@@ -15,9 +14,9 @@ In practice, embeddings are frequently evaluated using similarity or clustering.
 
 This motivates a clearer separation:
 
-Measurements describe perturbations.
-Knowledge encodes known equivalences.
-Hypotheses ask whether two perturbations are mechanistically equivalent.
+**Measurements** describe perturbations.
+**Knowledge** encodes known equivalences.
+**Hypotheses** ask whether two perturbations are mechanistically equivalent.
 
 Embeddings represent measurements. Equivalence is not a geometric property of representation space—it is a hypothesis that must be learned and tested.
 
