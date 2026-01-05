@@ -2,7 +2,7 @@
 layout: post
 title: "Why Architecture Shapes the Biology You See"
 subtitle: "How Self-Supervision Determines What Biological Signal Becomes Visible"
-date: 2025-12-20
+date: 2026-01-05
 tags: [AI / Machine Learning, Biology / Experimentation, Strategy / Foundations]
 image: /assets/images/biounfold-014-measurements-knowledge-hypothesis.png
 ---
