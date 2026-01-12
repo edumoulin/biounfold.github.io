@@ -2,7 +2,7 @@
 layout: post
 title: "Similarity Is Not Mechanism: Limits of Representation in Biology"
 date: 2026-01-05
-tags: [AI / Machine Learning, Biology / Experimentation]
+tags: [AI / Computation, Biology / Experimentation]
 image: /assets/images/biounfold-014-measurements-knowledge-hypothesis.png
 ---
 
