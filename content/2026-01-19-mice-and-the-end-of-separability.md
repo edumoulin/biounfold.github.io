@@ -3,7 +3,7 @@ layout: post
 title: "Mice and the end of separability"
 subtitle: "Where biology becomes medicine"
 date: 2026-01-19
-tags: [ Strategy / Platforms ]
+tags: [ Biology / Experimentation, Strategy / Platforms ]
 image: /assets/images/biounfold-016-from-perturbation-to-treatment.png
 ---
 
@@ -34,9 +34,9 @@ As a result, the scientific problem shifts. Effects are harder to isolate. Measu
 
 From there on, a program no longer explores. It **confronts**. The center of gravity moves from extracting signal to operating inside entanglement.
 
-#### The trade: from biological knowledge to medical knowledge
+#### From biological knowledge to medical insight
 
-As separability breaks, the nature of what is learned changes with it. Discovery begins to **trade biological knowledge for medical knowledge**.
+As separability breaks, the nature of what is learned changes with it. Discovery begins to **translate biological knowledge into medical insight**.
 
 Before mice, most data describes properties of systems and molecules: potency, selectivity, mechanism, perturbational effects. It helps explain what the biology is doing and how an intervention interacts with it.
 
