@@ -2,7 +2,7 @@
 layout: post
 title: "Mice and the end of separability"
 subtitle: "Where biology becomes medicine"
-date: 2026-01-12
+date: 2026-01-19
 tags: [ Strategy / Platforms ]
 image: /assets/images/biounfold-016-from-perturbation-to-treatment.png
 ---
