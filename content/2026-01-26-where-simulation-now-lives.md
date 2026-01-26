@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Where Simulation Now Lives"
-date: 2026-01-20
+date: 2026-01-26
 tags: [ Strategy / Platforms, AI / Computation ]
 image: /assets/images/biounfold-017-where-simulation-now-lives.png
 ---
