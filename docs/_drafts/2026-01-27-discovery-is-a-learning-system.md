@@ -2,7 +2,7 @@
 layout: post
 title: "Discovery Is a Learning System"
 date: 2026-01-27
-tags: [ Strategy / Platforms, Discovery Systems, AI / Computation ]
+tags: [ Strategy / Platforms, AI / Computation ]
 image: /assets/images/biounfold-018-two-regimes-of-learning.png
 ---
 
