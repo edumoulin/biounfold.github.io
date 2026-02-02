@@ -12,7 +12,7 @@ image: /assets/images/biounfold-018-two-regimes-of-learning.png
 ![Discovery Is a Learning System](/assets/images/biounfold-018-two-regimes-of-learning.png){: width="90%"}
 
 
-## Two regimes of learning
+#### Two regimes of learning
 
 In computation, there are two broad ways to learn about an unknown system.
 
@@ -33,7 +33,7 @@ Wet scientific discovery lives almost entirely in this second regime. Every expe
 It is sequential learning under extreme cost, latency, and irreversibility.
 
 
-## How discovery actually learns
+#### How discovery actually learns
 
 In practice, discovery is organized as a sequence of stages:
 
@@ -52,7 +52,7 @@ The process is not fully deterministic, and there is variation, especially early
 What the system is allowed to correct — its assumptions about mechanisms, relevance, and transfer — becomes narrower.
 
 
-## Transferability failure
+#### Transferability failure
 
 One of biotech’s persistent failures is not the lack of activity, but the lack of transferability. Compounds work in assays. They work in engineered systems. They work in animals. And then they stop working. This is often framed as a property of biology: human systems are too complex, models are too poor, translation is inherently uncertain. That is partly true. But from a learning perspective, there is another explanation.
 
@@ -70,7 +70,7 @@ This is when the system first encounters biology it did not train itself to see.
 Reframing discovery as a learning system shifts where value is expected to come from. Not from running more experiments. Not from moving faster through phases. But from improving how the system updates itself.
 
 
-## Two kinds of updates
+#### Two kinds of updates
 
 In sequential learning systems, not all updates mean the same thing. Some refine a model. Others decide which models are still admissible. One concentrates belief. The other redistributes it. In learning terms, this is the difference between learning parameters inside a model and learning which models are still possible.
 
@@ -89,7 +89,7 @@ These experiments are not chosen to improve performance inside a model. They are
 Running discovery as a genuine learning system therefore does not primarily mean adding more AI, more automation, or more throughput. It means designing feedback loops where uncertainty is not immediately collapsed, validation is not only confirmatory, stage transitions do not erase epistemic state, orthogonality is treated as exploration, and progress is measured by correction, not only advancement. This does not slow discovery. It changes what discovery optimizes.
 
 
-## Conclusion
+#### Conclusion
 
 From a computational perspective, scientific discovery is not a data problem. It is a feedback problem. Experiments are expensive queries. Programs are sequential decision processes. Pipelines are implicit learning systems. And today, most of those systems are built to move forward efficiently, not to preserve and transform belief. They execute science well. They update belief inside a field they no longer question. They are not structured to sustain the question of what else could be true.
 

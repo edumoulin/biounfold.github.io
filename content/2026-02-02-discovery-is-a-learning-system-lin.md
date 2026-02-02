@@ -6,19 +6,17 @@ summary_for: biounfold-018-two-regimes-of-learning
 published: false
 ---
 
-**Discovery is a learning system — and most failures are learning failures.**
+**Discovery as a Learning System**
 
-Modern discovery is not limited by data or tools. It is limited by how experiments are connected across time.
+In practice, discovery behaves less like a one-shot optimization problem and more like a sequential learning system. Each experiment is not only a measurement, but a decision about what evidence to generate next.
 
-Most programs move efficiently forward, but collapse uncertainty too early. They stabilize assays, optimize within a narrow experimental world, and mistake repetition for learning. Evidence accumulates — but belief stops moving.
+Many programs become very good at improving performance inside a stabilized experimental world. Evidence accumulates, rankings sharpen, confidence increases. What is harder — and often postponed — is testing whether the underlying explanation still holds when the context changes.
 
-This is why so many programs look strong in models and fragile in reality.
+This may help explain why programs can look strong across a series of increasingly complex model systems and still struggle to generalize.
 
-Translation does not fail only in the clinic. It often fails much earlier, when discovery systems stop testing whether their own explanations can travel.
+Reframing discovery as a learning system shifts attention away from speed or throughput, and toward how uncertainty is preserved, challenged, and updated over time.
 
-Reframing discovery as a learning system shifts the question from “how fast can we advance?” to “how well do we update what we believe?”
-
-Pipelines scale discovery.
-Feedback determines whether it actually learns.
+Pipelines scale work.
+Feedback shapes what the system is actually able to learn.
 
 #TechBio #DrugDiscovery #BioUnfold
