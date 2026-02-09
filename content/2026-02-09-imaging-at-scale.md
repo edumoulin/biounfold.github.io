@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Imaging at Scale: Homogeneity and Ambiguity in Discovery"
-date: 2026-02-06
+date: 2026-02-09
 tags: [Biology / Experimentation, AI / Computation]
 image: /assets/images/biounfold-019-signal-extraction-in-imaging-screens.png
 ---

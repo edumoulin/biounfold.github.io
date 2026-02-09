@@ -1,7 +1,7 @@
 ---
 layout: null
 title: "Imaging at Scale: Homogeneity and Ambiguity in Discovery"
-date: 2026-02-06
+date: 2026-02-09
 summary_for: biounfold-018-two-regimes-of-learning
 published: false
 ---

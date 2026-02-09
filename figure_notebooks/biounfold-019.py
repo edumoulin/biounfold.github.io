@@ -76,11 +76,12 @@ def signal_curve(x, q, baseline=0.18, sat=0.20,
 
 # Choose qualities so low is nearly monotone decreasing
 q_low, q_mid, q_high = 0.35, 0.85, 1.80
+q_low, q_mid, q_high = 1.0, 1.0, 1.0
 
 # Increase ambiguity cost for low-quality only to make it monotone-ish
-y_low  = signal_curve(x, q_low,  a=7.0, noise_pow=2.8, q_pow=2.2, amplitude_gain=0.26)
-y_mid  = signal_curve(x, q_mid,  a=3.8, noise_pow=3.0, q_pow=2.3, amplitude_gain=0.26)
-y_high = signal_curve(x, q_high, a=3.0, noise_pow=3.2, q_pow=2.4, amplitude_gain=0.26)
+y_low  = signal_curve(x, q_low,  a=16.0, noise_pow=2.8, q_pow=2.2, amplitude_gain=0.26)
+y_mid  = signal_curve(x, q_mid,  a=6.0, noise_pow=3.0, q_pow=2.3, amplitude_gain=0.26)
+y_high = signal_curve(x, q_high, a=2.0, noise_pow=3.2, q_pow=2.4, amplitude_gain=0.26)
 
 # Normalize for aesthetics (keeps baseline > 0, but compresses into [0,1])
 m = max(y_low.max(), y_mid.max(), y_high.max())
@@ -164,7 +165,6 @@ for t in leg.get_texts():
 
 plt.tight_layout()
 plt.show()
-
 
 # %%
 save_path="../docs/assets/images/biounfold-019-signal-extraction-in-imaging-screens.png"
