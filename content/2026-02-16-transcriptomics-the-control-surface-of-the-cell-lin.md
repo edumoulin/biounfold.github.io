@@ -6,7 +6,7 @@ date: 2026-02-16
 published: false
 ---
 
-**Abstract — Transcriptomics: The Control Surface of the Cell**
+**Short version — Transcriptomics: The Control Surface of the Cell**
 
 Transcriptomics became central to modern discovery not simply because it measures many genes at once, but because it measures a layer of biology where regulation already constrains variation. Gene expression reflects how cells attempt to stabilize themselves under stress, signaling, or perturbation. Many distinct molecular causes converge on a limited number of coordinated transcriptional programs. This convergence makes large-scale integration and statistical modeling unusually tractable.
 
