@@ -7,7 +7,7 @@ tags: [Biology / Experimentation, AI / Computation]
 image: /assets/images/biounfold-021-dynamic-experiment-design.png
 ---
 
-### Dynamic Experiment Design
+### Biounfold #21 — Dynamic Experiment Design
 *Moving Beyond Static Assays*
 
 ![Dynamic Experiment Design](/assets/images/biounfold-021-dynamic-experiment-design.png){: width="90%"}
