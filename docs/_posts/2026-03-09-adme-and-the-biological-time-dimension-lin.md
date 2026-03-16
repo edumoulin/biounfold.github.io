@@ -14,3 +14,4 @@ ADME — absorption, distribution, metabolism, and excretion — turns molecules
 
 In this week’s BioUnfold, I explore why ADME becomes truly meaningful only once biology and mechanism are anchored — and why exposure is best understood as a problem of biological time.
 
+#TechBio #DrugDiscovery #BioUnfold
