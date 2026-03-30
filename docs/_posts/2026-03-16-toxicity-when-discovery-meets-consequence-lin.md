@@ -22,4 +22,6 @@ Yet binding alone does not explain everything.
 
 Biological systems are highly interconnected. A drug can bind its intended target with high specificity and still produce adverse effects because the pathway it perturbs is linked to other essential processes. In these cases toxicity emerges from on-target effects occurring in the wrong biological context.
 
+#TechBio #DrugDiscovery #BioUnfold
+
 
